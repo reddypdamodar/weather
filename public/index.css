@@ -1,3 +1,4 @@
 .img{
-    background-image: url("./bg.jpg");
+    background-image: url("./images/blue-ocean.webp");
+    background-size: cover
 }
