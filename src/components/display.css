@@ -16,7 +16,7 @@
     padding: 10px;
   }
   
-  
+/*   
   .displayweather .maincard {
     width: 500px;
     margin-top: 10px;
@@ -48,7 +48,7 @@
     margin-left: -150px;
   } */
  
-  .displayweather .weather-icon {
+  /* .displayweather .weather-icon {
     width: 100px;
   
     position: absolute;
@@ -63,12 +63,12 @@
     font-weight: 500;
     font-size: 1.2rem;
   }
-  
-  .displayweather .weather-description {
+   */ */
+  /* .displayweather .weather-description {
     position: absolute;
     left: 10px;
     font-size: 1.4rem;
-  }
+  } */
   /* .displayweather .weatherdetails {
     margin-left: 50px;
     margin-right: 50px;
@@ -94,6 +94,6 @@
     border-bottom: 2px dashed grey;
   } */
   
-  .displayweather .weatherdetails span {
+  /* .displayweather .weatherdetails span {
     font-size: 1.2rem;
-  }
+  } */
