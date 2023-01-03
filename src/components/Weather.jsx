@@ -1,6 +1,7 @@
 import "../Weather.css";
 import { useState } from "react";
 import Display from "./Display";
+import Error from "./Error";
 
 const api = {
   key: process.env.REACT_APP_KEY,
@@ -43,7 +44,7 @@ function Weather() {
         {typeof weather.main !== "undefined" ? (
           <Display weather={weather} />
         ) : (
-          ""
+          <Error />
         )}
       </header>
     </div>
