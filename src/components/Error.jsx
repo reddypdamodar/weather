@@ -1,12 +1,20 @@
 import React from "react";
 
-function Error() {
+function Error(props) {
+  let spellcheck, tr;
+  if (props.click) {
+    spellcheck = "Check Spelling of city name";
+    tr = "Try Again";
+  } else {
+    spellcheck = "";
+    tr = "";
+  }
   return (
     <div>
       <br />
-      <h3>Check Spelling of city name </h3>
+      <h3>{spellcheck} </h3>
       <br />
-      <h3>Try Again</h3>
+      <h3>{tr}</h3>
     </div>
   );
 }

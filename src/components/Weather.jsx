@@ -11,16 +11,18 @@ const api = {
 function Weather() {
   const [search, setSearch] = useState("");
   const [weather, setWeather] = useState({});
+  const [clicked, setclicked] = useState(false);
 
   /*
     Search button is pressed. Make a fetch call to the Open Weather Map API.
   */
-  const searchPressed = () => {
-    fetch(`${api.base}weather?q=${search}&units=metric&APPID=${api.key}`)
+  const searchPressed = async () => {
+    await fetch(`${api.base}weather?q=${search}&units=metric&APPID=${api.key}`)
       .then((res) => res.json())
       .then((result) => {
         setWeather(result);
       });
+    setclicked(true);
   };
 
   return (
@@ -33,6 +35,7 @@ function Weather() {
         <div>
           {api.env}
           <input
+            autoComplete="on"
             type="text"
             placeholder="Enter city/town..."
             onChange={(e) => setSearch(e.target.value)}
@@ -44,7 +47,7 @@ function Weather() {
         {typeof weather.main !== "undefined" ? (
           <Display weather={weather} />
         ) : (
-          <Error />
+          <Error click={clicked} />
         )}
       </header>
     </div>
