@@ -2,11 +2,16 @@
     text-align: center;
    
   }
+  .div-input input{
+    background-color: rgba(255,255,255,0.2);
+  }
   button {
     padding: 8px;
+    background-color: rgba(135, 126, 134, 0.534);
   }
   
   input {
     padding: 8px;
     outline: none;
+    color: transparent;
   }

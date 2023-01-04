@@ -32,10 +32,9 @@ function Weather() {
         <h1>Weather App</h1>
 
         {/* Search Box - Input + Button  */}
-        <div>
-          {api.env}
+        <div className="div-input">
           <input
-            autoComplete="on"
+            className="input"
             type="text"
             placeholder="Enter city/town..."
             onChange={(e) => setSearch(e.target.value)}
